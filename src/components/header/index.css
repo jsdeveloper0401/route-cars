@@ -1,7 +1,45 @@
-header{
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: 20px;
-  background: #3499e7;
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px;
+    background: #3499e7;
+}
+.nav__btn {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+}
+.nav__img {
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+}
+.input-group {
+    max-width: 30%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+.input {
+    max-width: 170px;
+    text-align: center;
+    color: #fff;
+    border:none;
+    outline:none;
+    border-radius: 85px;
+    background: rgba(244, 251, 255, 0.1);
+    backdrop-filter: blur(250px);
+}
+.input::placeholder {
+    color: #fff;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }

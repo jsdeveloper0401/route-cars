@@ -9,7 +9,7 @@ const Index = () => {
     return (
         <header className="bg-dark">
             <div className="container">
-                <nav className="d-flex justify-content-space-between gap-5 align-items-center">
+                <nav className="nav">
                     <NavLink>
                         <img src={Logo} alt="" />
                     </NavLink>
@@ -25,12 +25,16 @@ const Index = () => {
                         ))}
                     </ul>
                     <div className="input-group">
-                        <input type="text" className="input" />
-                        <button>
-                            <img src={Login} alt="Login" />
+                        <input type="text" className="input" placeholder="Search"/>
+                        <button className="nav__btn">
+                            <img src={Login} alt="Login" className="nav__img" />
                         </button>
-                        <button>
-                            <img src={Burger} alt="burger menu" />
+                        <button className="nav__btn">
+                            <img
+                                src={Burger}
+                                alt="burger menu"
+                                className="nav__img"
+                            />
                         </button>
                     </div>
                 </nav>
