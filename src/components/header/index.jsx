@@ -1,31 +1,46 @@
 import "./index.css";
 import routes from "@routes";
-import { NavLink } from "react-router-dom";
-import Logo from "@img/tesla-logo.png";
+import { NavLink, useLocation } from "react-router-dom";
+import Logo from "@img/navLogo.svg";
 import Login from "@img/login.png";
 import Burger from "@img/burger.png";
+import Search from "@img/search.svg"
 
 const Index = () => {
+    const location = useLocation();
+    console.log(location);
+
     return (
-        <header className="bg-dark">
+        <header className="header">
             <div className="container">
-                <nav className="nav">
-                    <NavLink>
-                        <img src={Logo} alt="" />
+                <nav className="nav d-flex align-items-center">
+                    <NavLink to="/">
+                        <img src={Logo} className="nav-logo-img" alt="Logo" />
                     </NavLink>
-                    <ul className="list-unstyled d-flex gap-3">
+                    <ul className="d-flex align-items-center m-0">
                         {routes?.map((item, index) => (
-                            <li key={index} className="list-unstyled">
+                            <li key={index} className="list-unstyled nav-item">
                                 <NavLink
                                     to={item.path}
-                                    className="text-decoration-none text-white">
+                                    className={`text-decoration-none  ${
+                                        location.pathname === item.path
+                                            ? "active"
+                                            : ""
+                                    }`}>
                                     {item.content}
                                 </NavLink>
                             </li>
                         ))}
                     </ul>
                     <div className="input-group">
-                        <input type="text" className="input" placeholder="Search"/>
+                        <div className="search-wrapper">
+                            <img src={Search} alt="search icon" className="search-icon"/>
+                            <input
+                                type="text"
+                                className="input"
+                                placeholder="Search"
+                            />
+                        </div>
                         <button className="nav__btn">
                             <img src={Login} alt="Login" className="nav__img" />
                         </button>

@@ -1,11 +1,12 @@
-import "./index.css"
+import "./index.css";
+import Arrow from "@img/arrow.svg";
 const Index = () => {
     return (
         <>
             <footer className="footer">
                 <div className="container">
                     <div className="footer__row">
-                        <ul className="d-flex gap-4 list-unstyled">
+                        <ul className="d-flex gap-5 list-unstyled footeer-list">
                             <li>
                                 <h3>396 mi</h3>
                                 <p>Range (EPA est.)</p>
@@ -23,7 +24,11 @@ const Index = () => {
                                 <p>Peak Power</p>
                             </li>
                         </ul>
-                        <button className="btn btn-primary text-white">Order Now</button>
+                        <div>
+                            <button className="footer-btn">
+                                Order Now <img src={Arrow} alt="" />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </footer>

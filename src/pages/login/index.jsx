@@ -1,10 +1,11 @@
 import React from "react";
-import BlueCar from "../../assets/img/blue-car.png";
-
+import BlueCar from "@img/blue-car.png";
+import BlackCar from "@img/black-car.png"
+import RedCar from "@img/red-car.png"
 const Index = () => {
     return (
         <div className="container">
-            <h1 className="text-center">ModelS</h1>
+            <h1 className="text-center text-white">ModelS</h1>
             <div
                 id="carouselExampleIndicators"
                 className="carousel slide"
@@ -38,14 +39,14 @@ const Index = () => {
                     </div>
                     <div className="carousel-item">
                         <img
-                            src={BlueCar}
+                            src={BlackCar}
                             className="d-block w-100"
                             alt="..."
                         />
                     </div>
                     <div className="carousel-item">
                         <img
-                            src={BlueCar}
+                            src={RedCar}
                             className="d-block w-100"
                             alt="..."
                         />

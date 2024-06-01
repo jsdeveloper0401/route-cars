@@ -4,7 +4,7 @@ import BlueCar from "../../assets/img/blue-car.png";
 const Index = () => {
     return (
         <div className="container">
-            <h1></h1>
+            <h1 className="text-center text-white">Model 3</h1>
             <div
                 id="carouselExampleIndicators"
                 className="carousel slide"
@@ -39,7 +39,7 @@ const Index = () => {
                     <div className="carousel-item">
                         <img
                             src={BlueCar}
-                            className="d-block w-100"
+                            className="d-block corusel-img w-100"
                             alt="..."
                         />
                     </div>
